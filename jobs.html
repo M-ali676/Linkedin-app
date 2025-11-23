@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - LinkedIn Clone</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .jobs-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1128px;
+            margin: 25px auto;
+            gap: 25px;
+        }
+        .jobs-sidebar {
+            width: 280px;
+            padding: 15px;
+        }
+        .jobs-main {
+            flex-grow: 1;
+            max-width: 800px;
+        }
+        .search-filters {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .search-filters input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .job-listing {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .job-listing:hover { background-color: #f9f9f9; }
+        .job-details { margin-left: 15px; }
+        .job-details h4 { color: var(--linkedin-blue); font-size: 16px; margin-bottom: 5px; }
+        .job-details p { font-size: 14px; color: #555; margin-bottom: 5px; }
+        .job-listing .company-logo {
+            width: 60px;
+            height: 60px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">...</header> 
+    
+    <div class="jobs-container">
+        
+        <section class="jobs-main">
+            
+            <div class="search-filters">
+                <input type="text" placeholder="Search by title, skill, or company">
+                <input type="text" placeholder="Location (e.g., Karachi, remote)">
+                <button class="post-submit-btn" style="border-radius: 5px;">Search</button>
+            </div>
+
+            <div class="job-listing">
+                <img src="images/developerf.png" alt="Company Logo" class="company-logo">
+                <div class="job-details">
+                    <h4>Frontend Developer</h4>
+                    <p>Company Alpha | Karachi (Remote)</p>
+                    <p style="font-size: 13px; color: #008000;">Easy Apply</p>
+                </div>
+            </div>
+
+            <div class="job-listing">
+                <img src="images/backend.png" alt="Company Logo" class="company-logo">
+                <div class="job-details">
+                    <h4>Python Backend Engineer</h4>
+                    <p>Company Beta | Lahore</p>
+                    <p style="font-size: 13px;">Promoted</p>
+                </div>
+            </div>
+
+            </section>
+
+        <aside class="jobs-sidebar sidebar-right">
+             <div class="news-widget">
+                <h3>Job Management</h3>
+                <ul>
+                    <li><i class="fas fa-bookmark"></i> My Jobs (Saved)</li>
+                    <li><i class="fas fa-file-invoice"></i> Application Settings</li>
+                    <li><i class="fas fa-bell"></i> Job Alerts</li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
