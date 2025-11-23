@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up - LinkedIn Clone</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific CSS for Auth Page */
+        body {
+            background-color: var(--background-grey);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .auth-logo {
+            color: var(--linkedin-blue);
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .auth-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .auth-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--linkedin-blue);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #004d9c;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .toggle-link a {
+            color: var(--linkedin-blue);
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Toggle between forms */
+        #signup-form {
+            display: none; /* Sign-up form initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <i class="fab fa-linkedin auth-logo"></i>
+    
+    <div class="auth-container">
+        
+        <form id="login-form">
+            <h2>Sign In</h2>
+            
+            <div class="form-group">
+                <label for="login-email">Email or Phone</label>
+                <input type="email" id="login-email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-password">Password (6+ chars)</label>
+                <input type="password" id="signup-password" required minlength="6">
+            </div>
+            
+            <button type="submit" class="submit-btn">Agree & Join</button>
+        </form>
+        
+        <div class="toggle-link">
+            <span id="toggle-text">New to LinkedIn?</span> 
+            <a id="toggle-button">Join now</a>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
