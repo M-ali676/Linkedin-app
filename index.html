@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <i class="fab fa-linkedin linkedin-logo"></i>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <nav class="header-right">
+    <a href="index.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
+    
+    <a href="network.html"><i class="fas fa-user-friends"></i> <span>My Network</span></a>
+    
+    <a href="jobs.html"><i class="fas fa-briefcase"></i> <span>Jobs</span></a>
+    
+    <a href="#"><i class="fas fa-comment-dots"></i> <span>Messaging</span></a>
+    <a href="#"><i class="fas fa-bell"></i> <span>Notifications</span></a>
+    
+    <div class="profile-dropdown">
+        <a href="profile.html" class="profile-link">
+            <img src="images/carporate.png" alt="Profile">
+            <span>Me <i class="fas fa-caret-down"></i></span>
+        </a>
+    </div>
+</nav>
+            
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar-left">
+            <div class="profile-card">
+                <div class="profile-header"></div>
+                <img src="images/carporate.png" alt="User" class="profile-photo">
+                <a href="#"><h3>M-Ali</h3></a>
+                <p>Frontend Developer | HTML, CSS, JS Expert</p>
+                <hr>
+                <div class="profile-stats">
+                    <div><span>Connections</span><span class="stat-num">300</span></div>
+                    <div><span>Views</span><span class="stat-num">567</span></div>
+                </div>
+            </div>
+            <div class="shortcuts-card">
+                <h4>Recent</h4>
+                <ul>
+                    <li><i class="fas fa-users"></i> Web Developers Group</li>
+                    <li><i class="fas fa-hashtag"></i> coding-tips</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="feed-section">
+            <div class="create-post">
+                <div class="post-input-area">
+                    <img src="images/profile.png" alt="User" class="post-user-photo">
+                    <textarea id="post-input" placeholder="Start a post..."></textarea>
+                </div>
+                <div class="post-options">
+                    <button class="option-btn"><i class="fas fa-image" style="color:#70b5f9;"></i> Photo</button>
+                    <button class="option-btn"><i class="fas fa-video" style="color:#7fc15e;"></i> Video</button>
+                    <button class="option-btn"><i class="fas fa-calendar-alt" style="color:#e7a33e;"></i> Event</button>
+                    <button id="post-btn" class="post-submit-btn" disabled>Post</button>
+                </div>
+            </div>
+
+            <div class="news-feed" id="news-feed">
+                </div>
+        </section>
+
+        <aside class="sidebar-right">
+            <div class="news-widget">
+                <h3>LinkedIn News <i class="fas fa-info-circle"></i></h3>
+                <ul>
+                    <li>Top stories shaping the world</li>
+                    <li>The push for better remote work</li>
+                    <li>Tech stocks analysis</li>
+                </ul>
+            </div>
+            <div class="ad-widget">
+                <img src="images/ads.png" alt="Ad">
+            </div>
+        </aside>
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
